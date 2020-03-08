@@ -39,7 +39,7 @@ function reset(){
       } 
 
       // Display wins
-function woohoo(){
+    function woohoo(){
     alert("Congrats! You won!");
       wins++; 
       $('#wins').text(wins);
@@ -52,14 +52,15 @@ function woohoo(){
       $('#losses').text(losses);
       reset()
     }
+
     $('.img-thumnail').on ('click', function() {
          var number = $(this).attr('data-crystalvalue');
          number =parseInt(number);
          console.log( "img-thumnail :"+number);
-         playerTotal = playerTotal +number;
-         console.log("New playerTotal= " + playerTotal);
+         playerTotal = playerTotal +number;        
          $('#totalScore').text(playerTotal); 
-          //Win & lose conditions
+         console.log("New playerTotal= " + playerTotal);
+         //Win & lose conditions
         if (playerTotal == Random){
           woohoo();
         }
